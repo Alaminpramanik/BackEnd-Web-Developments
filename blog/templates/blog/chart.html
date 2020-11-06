@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Farmar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+</head>
+<body>
+{% block content %}
+
+  <div class="container fixed-top bg-light justify-content-center ">
+    <div class="row">
+      <div class="col-4" >
+         <img src="../static/img/logo.jpg" height="28" weight='50' alt="Cinque Terre">
+        
+      </div>
+      
+      <div class="col-4">
+        <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2 ">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control form-control-sm ml-3 w-75 border border-success" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          
+          <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'chart' %}">News Feed</a>
+          </div>
+          <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'register' %}" >Register</a>
+          </div>
+           <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'login' %}" >Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row  ">
+      <div class="col-4 text-left text-success"><a class="font-weight-bold text-success" href="{% url 'home' %}"><h3>Categories</h3</a></div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'home' %}">Home</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'about' %}" >About Us</a>
+      </div>
+    
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'agency' %}">Agency</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'blog' %}">Blog</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'training' %}">Training</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top:110px">
+    <div class="row ">
+      <div class="col-2 ">
+        <div class="row">
+          <a class="font-weight-bold text-success" href="{% url 'vegitable' %}">Vegitable</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'fish' %}">Fish</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'meet' %}">Meets  And Egg</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'rice' %}">Rice</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'machine' %}">Machine</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'madichine' %}">Madichine</a>
+        </div>
+      </div>
+      <div class="col-10" >
+      
+        <div class="row">
+          <div class="col-4" style="width: 150px; height: 200px;">
+        
+            <img src="../static/img/f1.jpeg" class="w-100 p-3" alt="Cinque Terre">
+        
+          </div>
+          <div class="col-8" style="width: 150px; height: 200px;">
+            <h1>Azgar Miah's journey</h1>
+            <p>
+              Azgar is a father, husband, son and a seasonal farmer in Azizpur, Patgram. 
+              Azgar’s produce ranges from corn, potatoes and varieties of other vegetables to rice and paddy. 
+              Azgar has 3 children; Two sons and a daughter. The other members of his family includes his father and his wife, 
+              Rabeya Khatun. 
+            </p>
+            <a class="font-weight-bold  text-success"  href="#">See More</a>
+          </div>
+      
+        </div>
+        <div class="row" style="margin-top:20px">
+          <div class="col-4" style="width: 150px; height: 200px;">
+        
+            <img src="../static/img/f2.jpg" class="w-100 p-3" alt="Cinque Terre">
+        
+          </div>
+          <div class="col-8" style="width: 150px; height: 200px;">
+            <h1>Mossamat Minu's journey</h1>
+            <p>
+              Meet Minu, a livestock farmer from Srirampur, a beautiful village in Patgram, Lalmonirhat. Through iFarmer, which provides easy access to capital for underprivileged farmers by connecting them with potential farm sponsors,
+               Minu has been able to reach a sustainable financial solvency.
+            </p>
+            <a class="font-weight-bold text-success"  href="#">See More</a>
+          </div>
+      
+        </div>
+        <div class="row" style="margin-top:5px">
+          <div class="col-4" style="width: 150px; height: 200px;">
+        
+            <img src="../static/img/f3.png" class="w-100 p-3" alt="Cinque Terre">
+        
+          </div>
+          <div class="col-8" style="width: 150px; height: 200px;">
+            <h1>Selim Mia’s journey </h1>
+            <p>
+              Selim Mia, a cattle farmer from Lalmonirhaat, Bangladesh, has over 6 years of farming experience.
+               He joined iFarmer more than a year ago. Through the assistance that iFarmer provided its community of farmers, 
+               Selim Mia's hardships were reduced in the face of challenging circumstances arising due to the ongoing COVID-19 and prolonged floods this year. 
+              This year, cattle farmers suffered three major adversities that affected the livestock market.
+            </p>
+            <a class="font-weight-bold text-success"  href="#">See More</a>
+          </div>
+      
+        </div>
+
+
+
+
+      </div>
+    </div>
+    
+    
+    
+    <div class="row bg-success" style="margin-top:100px">
+      <div class="col text-white">
+      <h3>Contact Us</h3>
+        <p>63/1,Sukrabad,Dhanmondi,Dhaka</p>
+        <p>alamin493641@gmail.com</p>
+        <p>01838638369</p>
+      </div>
+      <div class="col text-white">
+        <h3>Our Service</h3>
+        <div class="row" >
+          <a class=" text-white text-ligh" href="#">Direct Contact</a>
+        </div>
+        <div class="row">
+          <a class="text-white text-ligh" href="#">Training</a>
+        </div>
+      </div>
+      <div class="col text-white">
+        <h3>Menu</h3>
+        <div class="row">
+          <a class=" text-white text-ligh" href="#">Privacy Policy</a>
+        </div>
+        <div class="row">
+          <a class="text-white text-ligh" href="#">Terms & Conditions</a>
+        </div>
+      </div>
+      
+      <div class="col text-white">
+        <h3>Social Media</h3>
+        <div class="row" style="width: 30px; height: 30px;">
+          <a class=" text-white text-ligh" href="#">Facebook</a>
+          <a class=" text-white text-ligh" href="#">Twitter</a>
+          <a class=" text-white text-ligh" href="#">Google+</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+</body>
+</html>

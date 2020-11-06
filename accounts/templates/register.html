@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Farmar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+
+</head>
+<body>
+{% block content %}
+
+  <div class="container fixed-top bg-light justify-content-center ">
+    <div class="row">
+      <div class="col-4" >
+         <img src="../static/img/logo.jpg" height="28" weight='50' alt="Cinque Terre">
+        
+      </div>
+      
+      <div class="col-4">
+        <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2 ">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control form-control-sm ml-3 w-75 border border-success" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          
+          <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'chart' %}">News Feed</a>
+          </div>
+          <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'register' %}" >Register</a>
+          </div>
+           <div class="col-sm">
+            <a class="font-weight-bold text-success" href="{% url 'login' %}" >Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row  ">
+      <div class="col-4 text-left text-success"><h3>Categories</h3></div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'home' %}">Home</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'about' %}" >About Us</a>
+      </div>
+    
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'agency' %}">Agency</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'blog' %}">Blog</a>
+      </div>
+      <div class="col">
+        <a class="font-weight-bold text-success" href="{% url 'training' %}">Training</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top:110px">
+    <div class="row ">
+      <div class="col-2 ">
+        <div class="row">
+          <a class="font-weight-bold text-success" href="{% url 'vegitable' %}">Vegitable</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'fish' %}">Fish</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'meet' %}">Meets  And Egg</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'rice' %}">Rice</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'machine' %}">Machine</a>
+        </div>
+        <div class="row">
+          <a class="font-weight-bold text-success"  href="{% url 'madichine' %}">Madichine</a>
+        </div>
+      </div>
+      <div class="col-10" >
+        <form name="myform">
+					<div class="form-group">
+						<label for="myName">First Name *</label>
+						<input id="myName" name="myName" class="form-control" type="text" data-validation="required">
+						<span id="error_name" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="lastname">Last Name *</label>
+						<input id="lastname" name="lastname" class="form-control" type="text" data-validation="email">
+						<span id="error_lastname" class="text-danger"></span>
+					</div>
+         			 <div class="form-group">
+						<label for="age">Password*</label>
+						<input id="Password" name="Password"  class="form-control" type="text" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+          			<div class="form-group">
+						<label for="age">Confirm Password *</label>
+						<input id="c_password" name="c_password"  class="form-control" type="text" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="age">Email *</label>
+						<input id="email" name="email"  class="form-control" type="text" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+          			<div class="form-group">
+						<label for="age">Country *</label>
+						<input id="country" name="country"  class="form-control" type="country" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+          
+					<div class="form-group">
+						<label for="age">Age *</label>
+						<input id="age" name="age"  class="form-control" type="number" min="1" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="dob">Date Of Birth *</label>
+						<input type="date" name="dob" id="dob" class="form-control">
+						<span id="error_dob" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="gender">Gender</label>
+						<select name="gender" id="gender" class="form-control">
+							<option selected>Male</option>
+							<option>Female</option>
+							<option>Other</option>
+						</select>
+						<span id="error_gender" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="phone">Passport Number*</label>
+						<input type="text" id="phone" name="passport" class="form-control" >
+						<span id="error_passport" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="disc">Discription</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					
+					<button id="submit" type="submit" value="submit" class="btn btn-success center">Submit</button>
+			
+				</form>
+
+      </div>
+    </div>
+    
+    
+    <div class="row bg-success" style="margin-top:20px">
+      <div class="col text-white">
+      <h3>Contact Us</h3>
+        <p>63/1,Sukrabad,Dhanmondi,Dhaka</p>
+        <p>alamin493641@gmail.com</p>
+        <p>01838638369</p>
+      </div>
+      <div class="col text-white">
+        <h3>Our Service</h3>
+        <div class="row" >
+          <a class=" text-white text-ligh" href="#">Direct Contact</a>
+        </div>
+        <div class="row">
+          <a class="text-white text-ligh" href="#">Training</a>
+        </div>
+      </div>
+      <div class="col text-white">
+        <h3>Menu</h3>
+        <div class="row">
+          <a class=" text-white text-ligh" href="#">Privacy Policy</a>
+        </div>
+        <div class="row">
+          <a class="text-white text-ligh" href="#">Terms & Conditions</a>
+        </div>
+      </div>
+      
+      <div class="col text-white">
+        <h3>Social Media</h3>
+        <div class="row" style="width: 30px; height: 30px;">
+          <a class=" text-white text-ligh" href="#">Facebook</a>
+          <a class=" text-white text-ligh" href="#">Twitter</a>
+          <a class=" text-white text-ligh" href="#">Google+</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+</body>
+</html>
