@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+""" python manage code"""
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'farmers.settings')
